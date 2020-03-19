@@ -1,33 +1,91 @@
 .App {
+  padding-top: 10%;
   text-align: center;
+  
+  
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#addForm{
+  margin: 15% 23%;
+  padding: 15%;
+  text-align: center;
+  background-color: rgba(76, 0, 130, 0.555);
+  border-radius: 40%;
+  width: 250px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
 
-.App-link {
-  color: #61dafb;
+#addForm button{
+  background-color: ghostwhite;
+  margin-top: 50%;
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  border-radius: 15%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#addForm button:hover{
+  background-color: goldenrod;
+  margin-top: 50%;
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  border-radius: 50%;
 }
+
+#addForm div{
+  width: 50px;
+  margin-left: 10%;
+}
+
+#oneTodo{
+  margin: 10% 10%;
+  padding: 15%;
+  background-color: cadetblue;
+  border-radius: 5%;
+}
+#oneTodo button{
+  background-color: ghostwhite;
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  height: 50px;
+}
+
+#oneTodo button:hover{
+  background-color: gold;
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  height: 50px;
+  border-radius: 10%;
+}
+
+#todoList{
+  display: flex;
+  flex-direction: row;
+  overflow:scroll;
+}
+
+#toggle button{
+  
+  background-color: ghostwhite;
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  height: 50px;
+  border-radius: 30%;
+}
+
+#toggle button:hover{
+  background-color: greenyellow;
+  width: 300px;
+  
+  text-align: center;
+  height: 70px;
+  border-radius: 30%;
+}
+
