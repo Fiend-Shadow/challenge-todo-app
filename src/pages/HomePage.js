@@ -7,7 +7,7 @@ export default class HomePage extends Component {
     todoList: [],
     showForm: false,
     title: "",
-    body:""
+    body: ""
   };
 
   componentDidMount() {
@@ -16,7 +16,7 @@ export default class HomePage extends Component {
 
   getTodoList = () => {
     axios
-      .get("http://localhost:5000/api/v1/todos")
+      .get("http://localhost:4000/api/v1/todos")
       .then(response => {
         console.log(response.data);
         this.setState({ todoList: response.data });
@@ -32,21 +32,21 @@ export default class HomePage extends Component {
 
   addTodo = event => {
     event.preventDefault();
-    const {title,body}=this.state
+    const { title, body } = this.state;
     axios
-      .post("http://localhost:5000/api/v1/todos",{title,body})
+      .post("http://localhost:4000/api/v1/todos", { title, body })
       .then(response => {
         console.log(response.data);
       })
       .catch(err => {
         console.log(err);
       });
-      window.location.reload();
+    window.location.reload();
   };
 
   handleChange = event => {
     const { name, value } = event.target;
-    this.setState({[name]: value });
+    this.setState({ [name]: value });
   };
 
   render() {
@@ -58,16 +58,16 @@ export default class HomePage extends Component {
         {this.state.showForm ? (
           <>
             <form onSubmit={this.addTodo} id="addForm">
-            <div>
-              <label>title</label>
-              <input name="title" onChange={this.handleChange}></input>
-            </div>
               <div>
-              <label>body</label>
-              <input name="body" onChange={this.handleChange}></input>
+                <label>title</label>
+                <input name="title" onChange={this.handleChange}></input>
               </div>
               <div>
-              <button>add</button>
+                <label>body</label>
+                <input name="body" onChange={this.handleChange}></input>
+              </div>
+              <div>
+                <button>add</button>
               </div>
             </form>
           </>
